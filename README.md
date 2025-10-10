@@ -26,10 +26,10 @@
 1-DAY_Confirmation/   
 ├── CVE-2024-21821/   
 │   ├── analysis.md   
-│   ├── poc.py(not yet)   
-│   └── screenshots(not yet)/   
+│   └── exploit.py   
 ├── CVE-2024-21833/   
-│   └── analysis.md   
+│   ├── analysis.md   
+│   └── exploit.py   
 ├── CVE-2024-3847/   
 │   └── analysis.md   
 └── README.md   
