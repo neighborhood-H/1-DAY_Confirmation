@@ -23,10 +23,10 @@
 ## 📁 Repository Structure
 
 1-DAY_Confirmation/   
-├── CVE-2024-21821/  
+├── CVE-2024-21821/   
 │   ├── analysis.md   
-│   ├── poc.py   
-│   └── screenshots/   
+│   ├── poc.py(not yet)   
+│   └── screenshots(not yet)/   
 ├── CVE-2024-21833/   
 │   └── analysis.md   
 ├── CVE-2024-3847/   
