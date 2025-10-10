@@ -12,7 +12,7 @@
 
 ---
 
-## 📌 Quick Links
+## Quick Links
 
 - [CVE-2024-21821 — folder_sharing.lua 분석](./CVE-2024-21821/analysis.md)  
 - [CVE-2024-21833 — blocking.lua 분석](./CVE-2024-21833/analysis.md)  
@@ -35,7 +35,7 @@
 
 ---
 
-## 🧠 Overview
+## Overview
 
 | CVE | 취약 유형 | 영향 모듈 | 분석 범위 | PoC 여부 | 상태 |
 |-----|------------:|------------|------------|:--------:|:----:|
@@ -45,7 +45,7 @@
 
 ---
 
-## 🧩 Analysis Format (Template)
+## Analysis Format (Template)
 
 각 `analysis.md`는 동일한 템플릿을 따릅니다.
 
