@@ -66,15 +66,15 @@
 > 기본 테스트 환경: Ubuntu 22.04 (or WSL), qemu-user-static, binwalk, python3
 
 ```bash
-# 필수 도구 설치 (Ubuntu 예시)
+# 필수 도구 설치 Ubuntu
 sudo apt update
 sudo apt install -y binwalk qemu-user-static python3-pip build-essential
 pip3 install pycryptodome
 
-# 펌웨어 추출 예시
+# 펌웨어 추출
 binwalk -Me firmware.bin
 
-# squashfs-root 내부에서 qemu로 uhttpd 실행 (격리 환경)
+# squashfs-root 
 sudo cp /usr/bin/qemu-arm-static squashfs-root/usr/bin/
 cd squashfs-root
 sudo mount --bind /dev ./dev
