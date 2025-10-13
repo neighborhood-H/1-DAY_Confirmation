@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Repo Status](https://img.shields.io/badge/Status-Research-critical.svg)]()
-[![Last updated](https://img.shields.io/badge/Last%20update-2025--10--10-lightgrey.svg)]()
+[![Last updated](https://img.shields.io/badge/Last%20update-2025--10--12-lightgrey.svg)]()
 
 > **Purpose:**  
 > 본 저장소는 1-Day(단기) 취약점 리서치를 위해 운영되는 팀 저장소입니다. 주요 IoT/네트워크 장비의 **취약점 분석 · PoC 재현 · 패치 검증**을 체계적으로 기록합니다.  
@@ -19,6 +19,7 @@
 - [CVE-2024-21821 — folder_sharing.lua 분석](./CVE-2024-21821/analysis.md)  
 - [CVE-2024-21833 — blocking.lua 분석](./CVE-2024-21833/analysis.md)  
 - [CVE-2024-3847 — firmware restore 분석](./CVE-2024-3847/analysis.md)
+- [CVE-2025-11005 — shttpd RCE 분석](./CVE-2025-11005/analysis.md)
 
 ---
 
@@ -32,7 +33,10 @@
 │   ├── analysis.md   
 │   └── exploit.py   
 ├── CVE-2024-3847/   
-│   └── analysis.md   
+│   └── analysis.md
+├── CVE-2025-11005/
+│   ├── analysis.md
+│   └── exploit.py
 └── README.md   
  ```  
 ---
@@ -41,9 +45,10 @@
 
 | CVE | 취약 유형 | 영향 모듈 | 분석 범위 | PoC 여부 | 상태 |
 |-----|------------:|------------|------------|:--------:|:----:|
-| [CVE-2024-21821](./CVE-2024-21821/analysis.md) | OS Command Injection | `folder_sharing.lua` | 정적분석 · Diff · PoC · Emulation | ✅ | 완료 |
+| [CVE-2024-21821](./CVE-2024-21821/analysis.md) | OS Command Injection (Unauthenticated) | `folder_sharing.lua` | 정적분석 · Diff · PoC · Emulation | ✅ | 완료 |
 | [CVE-2024-21833](./CVE-2024-21833/analysis.md) | URL Validation Bypass | `blocking.lua` | 정적분석 · PoC | ✅ | 완료 |
 | [CVE-2024-3847](./CVE-2024-3847/analysis.md) | OS Command Injection (Restore) | `firmware.lua` | 복호화 · Diff · 재현 | 🚧 | 진행중 |
+| [CVE-2025-11005](./CVE-2025-11005/analysis.md) | OS Command Injection (Unauthenticated) | `shttpd (setWiFiAclRules)` | 정적분석 · PoC | ✅ | 완료 |
 
 ---
 
@@ -81,3 +86,20 @@ sudo mount --bind /dev ./dev
 sudo mount --bind /proc ./proc
 sudo chroot . /bin/bash -c 'ubusd &'
 sudo chroot . /usr/bin/qemu-arm-static /usr/sbin/uhttpd -f -h /www -x /cgi-bin -p 0.0.0.0:8080
+```
+
+---
+
+## 🔐 Security & Ethics
+
+본 저장소의 모든 PoC와 분석 자료는:
+- 교육 및 연구 목적으로만 사용됩니다
+- 격리된 로컬 환경에서만 테스트됩니다
+- 무단 공격 행위를 절대 금지합니다
+- 책임있는 보안 연구 윤리를 준수합니다
+
+---
+
+## 📝 License
+
+이 저장소는 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 라이선스를 따릅니다.
