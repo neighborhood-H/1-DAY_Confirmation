@@ -1,10 +1,10 @@
 # 1-DAY_Confirmation
 
-# 🧩 1-DAY Vulnerability Research Repository
+# 1-DAY Vulnerability Research Repository
 
 [![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Repo Status](https://img.shields.io/badge/Status-Research-critical.svg)]()
-[![Last updated](https://img.shields.io/badge/Last%20update-2025--10--12-lightgrey.svg)]()
+[![Last updated](https://img.shields.io/badge/Last%20update-2025--10--25-lightgrey.svg)]()
 
 > **Purpose:**  
 > 본 저장소는 1-Day(단기) 취약점 리서치를 위해 운영되는 팀 저장소입니다. 주요 IoT/네트워크 장비의 **취약점 분석 · PoC 재현 · 패치 검증**을 체계적으로 기록합니다.  
