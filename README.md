@@ -2,12 +2,11 @@
 
 # 1-DAY Vulnerability Research Repository
 
-[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Repo Status](https://img.shields.io/badge/Status-Research-critical.svg)]()
 [![Last updated](https://img.shields.io/badge/Last%20update-2025--10--25-lightgrey.svg)]()
 
 > **Purpose:**  
-> 본 저장소는 1-Day(단기) 취약점 리서치를 위해 운영되는 팀 저장소입니다. 주요 IoT/네트워크 장비의 **취약점 분석 · PoC 재현 · 패치 검증**을 체계적으로 기록합니다.  
+> 본 저장소는 1-Day(단기) 취약점 리서치를 위해 운영되는 팀 저장소입니다. **취약점 분석 · PoC 재현 · 패치 검증**을 체계적으로 기록합니다.  
 > 모든 실험은 **격리된 로컬 환경(랩)**에서 수행하며, 문서는 교육·연구 목적에 한정합니다.
 
 ---
@@ -16,27 +15,24 @@
 
 - [Team Notion Analysis DB](https://neighberhood-h.notion.site/2769e85bb8a9806aba9ffddf57bf34ed?v=2769e85bb8a980788c2f000cd39b859c#2769e85bb8a9805caface9da717905ab)   
 
-- [CVE-2024-21821 — folder_sharing.lua 분석](./CVE-2024-21821/analysis.md)  
-- [CVE-2024-21833 — blocking.lua 분석](./CVE-2024-21833/analysis.md)  
-- [CVE-2024-3847 — firmware restore 분석](./CVE-2024-3847/analysis.md)
-- [CVE-2025-11005 — shttpd RCE 분석](./CVE-2025-11005/analysis.md)
+- [CVE-2024-21821 — folder_sharing.lua 분석](./CVE-2024-21821/reports/analysis.md)  
+- [CVE-2024-21833 — blocking.lua 분석](./CVE-2024-21833/reports/analysis.md)  
+- [CVE-2024-3847 — firmware restore 분석](./CVE-2024-3847/reports/analysis.md)
+- [CVE-2025-11005 — shttpd RCE 분석](./CVE-2025-11005/reports/analysis.md)
 
 ---
 
 ## 📁 Repository Structure
 ```
 1-DAY_Confirmation/   
-├── CVE-2024-21821/   
-│   ├── analysis.md   
-│   └── exploit.py   
-├── CVE-2024-21833/   
-│   ├── analysis.md   
-│   └── exploit.py   
-├── CVE-2024-3847/   
-│   └── analysis.md
-├── CVE-2025-11005/
-│   ├── analysis.md
-│   └── exploit.py
+├── CVE-YYYY-NNNNN/   
+│   ├── reports/   
+│   │   ├── LICENSE
+│   │   └── analysis.md
+│   └── PoC/
+│       └── exploit.py
+│
+├── LICENSE
 └── README.md   
  ```  
 ---
@@ -45,10 +41,10 @@
 
 | CVE | 취약 유형 | 영향 모듈 | 분석 범위 | PoC 여부 | 상태 |
 |-----|------------:|------------|------------|:--------:|:----:|
-| [CVE-2024-21821](./CVE-2024-21821/analysis.md) | OS Command Injection (Unauthenticated) | `folder_sharing.lua` | 정적분석 · Diff · PoC · Emulation | ✅ | 완료 |
-| [CVE-2024-21833](./CVE-2024-21833/analysis.md) | URL Validation Bypass | `blocking.lua` | 정적분석 · PoC | ✅ | 완료 |
-| [CVE-2024-3847](./CVE-2024-3847/analysis.md) | OS Command Injection (Restore) | `firmware.lua` | 복호화 · Diff · 재현 | 🚧 | 진행중 |
-| [CVE-2025-11005](./CVE-2025-11005/analysis.md) | OS Command Injection (Unauthenticated) | `shttpd (setWiFiAclRules)` | 정적분석 · PoC | ✅ | 완료 |
+| [CVE-2024-21821](./CVE-2024-21821/reports/analysis.md) | OS Command Injection (Unauthenticated) | `folder_sharing.lua` | 정적분석 · Diff · PoC · Emulation | ✅ | 완료 |
+| [CVE-2024-21833](./CVE-2024-21833/reports/analysis.md) | URL Validation Bypass | `blocking.lua` | 정적분석 · PoC | ✅ | 완료 |
+| [CVE-2024-3847](./CVE-2024-3847/reports/analysis.md) | OS Command Injection (Restore) | `firmware.lua` | 복호화 · Diff · 재현 | 🚧 | 진행중 |
+| [CVE-2025-11005](./CVE-2025-11005/reports/analysis.md) | OS Command Injection (Unauthenticated) | `shttpd (setWiFiAclRules)` | 정적분석 · PoC | ✅ | 완료 |
 
 ---
 
@@ -100,6 +96,14 @@ sudo chroot . /usr/bin/qemu-arm-static /usr/sbin/uhttpd -f -h /www -x /cgi-bin -
 
 ---
 
-## 📝 License
+## 🧾 License
 
-이 저장소는 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 라이선스를 따릅니다.
+| 구분 | 적용 범위 | 라이선스 | 설명 |
+|------|------------|-----------|------|
+| **Code** | Exploit scripts, automation, PoC, tooling | [MIT License](./LICENSE) | 코드 자유 사용 및 수정 가능 (단, 보증 없음) |
+| **Documents** | Reports, analysis, README, write-ups | [CC BY-NC 4.0](./report/LICENSE) | 비상업적 목적의 문서 공유 및 수정 허용, 출처 표기 필수 |
+
+**요약**
+- Code → 자유롭게 재사용 가능 (MIT)  
+- Documentation → 상업적 이용 불가, 출처 표기 필수 (CC BY-NC 4.0)  
+- 모든 PoC는 교육 및 연구 목적에 한정되며, 실제 공격 목적으로 사용을 금합니다.
