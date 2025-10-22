@@ -1,0 +1,11 @@
+## 🧾 License
+
+| 구분 | 적용 범위 | 라이선스 | 설명 |
+|------|------------|-----------|------|
+| **Code** | Exploit scripts, automation, PoC, tooling | [MIT License](./LICENSE) | 코드 자유 사용 및 수정 가능 (단, 보증 없음) |
+| **Documents** | Reports, analysis, README, write-ups | [CC BY-NC 4.0](./report/LICENSE) | 비상업적 목적의 문서 공유 및 수정 허용, 출처 표기 필수 |
+
+**요약**
+- Code → 자유롭게 재사용 가능 (MIT)  
+- Documentation → 상업적 이용 불가, 출처 표기 필수 (CC BY-NC 4.0)  
+- 모든 PoC는 교육 및 연구 목적에 한정되며, 실제 공격 목적으로 사용을 금합니다.
