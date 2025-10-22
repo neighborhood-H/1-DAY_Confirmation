@@ -7,7 +7,7 @@
 [![Last updated](https://img.shields.io/badge/Last%20update-2025--10--25-lightgrey.svg)]()
 
 > **Purpose:**  
-> 본 저장소는 1-Day(단기) 취약점 리서치를 위해 운영되는 팀 저장소입니다. **취약점 분석 · PoC 재현 · 패치 검증**을 체계적으로 기록합니다.  
+> 본 저장소는 1-Day(단기) 취약점 리서치를 위해 운영되는 팀 저장소입니다. 주요 IoT/네트워크 장비의 **취약점 분석 · PoC 재현 · 패치 검증**을 체계적으로 기록합니다.  
 > 모든 실험은 **격리된 로컬 환경(랩)**에서 수행하며, 문서는 교육·연구 목적에 한정합니다.
 
 ---
@@ -26,14 +26,17 @@
 ## 📁 Repository Structure
 ```
 1-DAY_Confirmation/   
-├── CVE-YYYY-NNNNN/   
-│   ├── docs/ 
-│   │   ├─ LICENSE
-│   │   └─ analysis.md    
-│   └── poc/   
-│      └─ exploit.py   
-│
-├── LICENSE
+├── CVE-2024-21821/   
+│   ├── analysis.md   
+│   └── exploit.py   
+├── CVE-2024-21833/   
+│   ├── analysis.md   
+│   └── exploit.py   
+├── CVE-2024-3847/   
+│   └── analysis.md
+├── CVE-2025-11005/
+│   ├── analysis.md
+│   └── exploit.py
 └── README.md   
  ```  
 ---
@@ -97,14 +100,6 @@ sudo chroot . /usr/bin/qemu-arm-static /usr/sbin/uhttpd -f -h /www -x /cgi-bin -
 
 ---
 
-## 🧾 License
+## 📝 License
 
-| 구분 | 적용 범위 | 라이선스 | 설명 |
-|------|------------|-----------|------|
-| **Code** | Exploit scripts, automation, PoC | [MIT License](./LICENSE) | 코드 자유 사용 및 수정 가능 (단, 보증 없음) |
-| **Documents** | Docs, analysis, README, write-ups | [CC BY-NC 4.0](./docs/LICENSE) | 비상업적 목적의 문서 공유 및 수정 허용, 출처 표기 필수 |
-
-**요약**
-- Code → 자유롭게 재사용 가능 (MIT)  
-- Documentation → 상업적 이용 불가, 출처 표기 필수 (CC BY-NC 4.0)  
-- 모든 PoC는 교육 및 연구 목적에 한정되며, 실제 공격 목적으로 사용을 금합니다.
+이 저장소는 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 라이선스를 따릅니다.
