@@ -22,7 +22,7 @@
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 ```
 1-DAY_Confirmation/   
 ├── CVE-YYYY-NNNNN/   
@@ -62,7 +62,7 @@
 
 ---
 
-## ⚙️ Environment Setup (Example)
+##  Environment Setup (Example)
 
 > 기본 테스트 환경: Ubuntu 22.04 (or WSL), qemu-user-static, binwalk, python3
 
@@ -86,7 +86,7 @@ sudo chroot . /usr/bin/qemu-arm-static /usr/sbin/uhttpd -f -h /www -x /cgi-bin -
 
 ---
 
-## 🔐 Security & Ethics
+##  Security & Ethics
 
 본 저장소의 모든 PoC와 분석 자료는:
 - 교육 및 연구 목적으로만 사용됩니다
@@ -96,6 +96,6 @@ sudo chroot . /usr/bin/qemu-arm-static /usr/sbin/uhttpd -f -h /www -x /cgi-bin -
 
 ---
 
-## 🧾 License
+##  License
 - © 2025 neighborhood-H.
 - 모든 PoC는 교육 및 연구 목적에 한정되며, 실제 공격 목적으로 사용을 금합니다.
