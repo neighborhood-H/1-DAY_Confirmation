@@ -15,8 +15,8 @@
 
 - [Team Notion Analysis DB](https://neighberhood-h.notion.site/2769e85bb8a9806aba9ffddf57bf34ed?v=2769e85bb8a980788c2f000cd39b859c#2769e85bb8a9805caface9da717905ab)   
 
-- [CVE-2024-21773 — folder_sharing.lua 분석](./CVE-2024-21773/reports/analysis.md)  
-- [CVE-2024-21833 — blocking.lua 분석](./CVE-2024-21833/reports/analysis.md)  
+- [CVE-2024-21821 — folder_sharing.lua 분석](./CVE-2024-21821/reports/analysis.md)  
+- [CVE-2024-21773 — blocking.lua 분석](./CVE-2024-21773/reports/analysis.md)  
 - [CVE-2024-3847 — firmware restore 분석](./CVE-2024-3847/reports/analysis.md)
 - [CVE-2025-11005 — shttpd RCE 분석](./CVE-2025-11005/reports/analysis.md)
 
