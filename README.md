@@ -42,7 +42,7 @@
 | CVE | 취약 유형 | 영향 모듈 | 분석 범위 | PoC 여부 | 상태 |
 |-----|------------:|------------|------------|:--------:|:----:|
 | [CVE-2024-21821](./CVE-2024-21821/reports/analysis.md) | OS Command Injection (Unauthenticated) | `folder_sharing.lua` | 정적분석 · Diff · PoC · Emulation | ✅ | 완료 |
-| [CVE-2024-21833](./CVE-2024-21833/reports/analysis.md) | URL Validation Bypass | `blocking.lua` | 정적분석 · PoC | ✅ | 완료 |
+| [CVE-2024-21773](./CVE-2024-21773/reports/analysis.md) | URL Validation Bypass | `blocking.lua` | 정적분석 · PoC | ✅ | 완료 |
 | [CVE-2024-3847](./CVE-2024-3847/reports/analysis.md) | OS Command Injection (Restore) | `firmware.lua` | 복호화 · Diff · 재현 | 🚧 | 진행중 |
 | [CVE-2025-11005](./CVE-2025-11005/reports/analysis.md) | OS Command Injection (Unauthenticated) | `shttpd (setWiFiAclRules)` | 정적분석 · PoC | ✅ | 완료 |
 
